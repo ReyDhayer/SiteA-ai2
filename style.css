@@ -1177,3 +1177,71 @@ button:hover{
     color: #e91e63;
     font-weight: bold;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   
+    color: white;
+}
+
+.UL {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.UL li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.UL li a:hover {
+    color: #ff9800;
+}
+
+/* Esconde o menu em telas pequenas */
+.UL {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Torna o menu visível quando ativo */
+nav.active .UL {
+    display: flex;
+}
+
+/* Exibe o menu normal em telas maiores */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .UL {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+    }
+}
