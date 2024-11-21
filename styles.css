@@ -1,0 +1,305 @@
+/* Reset e Variáveis */
+:root {
+  --primary-color: #5A2D81;
+  --secondary-color: #8E44AD;
+  --accent-color: #D4A5D6;
+  --text-light: #ffffff;
+  --text-dark: #353535;
+  --success-color: #25d366;
+  --success-dark: #128c7e;
+  --product-bg: #0b4e16;
+  --price-color: #b22222;
+  --highlight-color: #cecb14;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Layout Base */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.fundo {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 20px;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* Tipografia */
+h1, h2 {
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 40px;
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+}
+
+/* Links e Navegação */
+.AcaiBra, .Produtos, .Combo {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* Elementos Decorativos */
+hr {
+  border: none;
+  border-top: 2px solid var(--text-light);
+  margin: 10px auto;
+  width: 20%;
+}
+
+.Palmeira {
+  margin-left: -40px;
+}
+
+.Palmeira2 {
+  margin-left: 550px;
+  transform: scaleX(-1);
+  margin-top: -96px;
+}
+
+/* Cards de Produtos */
+.produtos-acai, .combo {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.produtos-lista, .combo-lista {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.produto-item, .combo-item {
+  background-color: var(--product-bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.produto-item:hover, .combo-item:hover {
+  transform: translateY(-5px);
+}
+
+.produto-item img, .combo-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.produto-info h3, .combo-info h3 {
+  font-size: 22px;
+  color: var(--highlight-color);
+  margin-top: 15px;
+}
+
+.produto-info .descricao, .combo-info .descricao {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-top: 10px;
+}
+
+.produto-info .preco, .combo-info .preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--price-color);
+  margin-top: 10px;
+}
+
+/* Botões */
+.btn-comprar {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: var(--secondary-color);
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: var(--success-color);
+  color: var(--text-light);
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--success-dark);
+  transform: scale(1.1);
+}
+
+/* Mapa */
+.mapa {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.mapa h2 {
+  font-size: 24px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.mapa-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+iframe {
+  border: none;
+  border-radius: 10px;
+}
+
+/* Footer */
+.rodape {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.rodape-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: var(--text-light);
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--secondary-color);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  animation: fadeInUp 1s forwards;
+}
+
+/* Carrossel */
+.carrossel-container {
+  position: relative;
+  width: 40%;
+  max-width: 800px;
+  height: 400px;
+  overflow: hidden;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.carrossel-item {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.carrossel-item img {
+  width: 100%;
+  padding: 60px;
+  object-fit: cover;
+  margin-left: 100px;
+  height: 100%;
+}
+
+.btn.anterior,
+.btn.proximo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.anterior {
+  left: -550px;
+  top: 50px;
+}
+
+.btn.proximo {
+  left: -40px;
+  top: 50px;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
