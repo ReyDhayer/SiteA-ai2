@@ -36,7 +36,7 @@ function iniciarRotacaoAutomatica() {
 
 // Reinicia o intervalo automático
 function reiniciarIntervalo() {
-    clearInterval(intervalo);
+    if (intervalo) clearInterval(intervalo); // Verifica se o intervalo já está definido
     iniciarRotacaoAutomatica();
 }
 
@@ -44,6 +44,11 @@ function reiniciarIntervalo() {
 function init() {
     btnAnterior.addEventListener('click', handleAnteriorClick);
     btnProximo.addEventListener('click', handleProximoClick);
+
+    // Acessibilidade: adicionando ARIA aos botões
+    btnAnterior.setAttribute('aria-label', 'Ir para o item anterior');
+    btnProximo.setAttribute('aria-label', 'Ir para o próximo item');
+
     window.addEventListener('resize', atualizarCarrossel);
 
     atualizarCarrossel();
