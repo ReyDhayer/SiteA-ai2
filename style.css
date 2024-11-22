@@ -29,13 +29,19 @@ header h1 {
 /* Carrossel */
 .carrossel-container {
     position: relative;
-    width: 40%;
-    max-width: 800px;
-    height: 400px;
+    width: 50%;
+    /* Ocupa 80% da largura do container pai */
+    max-width: 50em;
+    /* Define uma largura máxima */
+    height: 25em;
+    /* Equivalente a 400px */
     overflow: hidden;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    margin: 1.25em auto;
+    /* 20px convertido para em */
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
+    /* 10px convertido para em */
+    border-radius: 0.625em;
+    /* 10px convertido para em */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,9 +52,10 @@ header h1 {
     transition: transform 0.5s ease-in-out;
     width: 100%;
     height: 100%;
-    margin-left: -28px;
-}
 
+
+    /* 28px convertido para em */
+}
 
 .carrossel-item {
     min-width: 100%;
@@ -59,19 +66,18 @@ header h1 {
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease-in-out;
-    background-size: cover;
-width: 100%;
-
+    width: 100%;
+    margin-left: -0.75em; /* 12px convertido para em */
+    padding: 0.3125em; /* 5px convertido para em */
 }
 
 .carrossel-item img {
-    width: 100%;
-    padding: 70px;
+    width: 90%; /* Mantém 90% da largura do item */
+    padding: 6.375em; /* 102px equivalente ao original */
     object-fit: cover;
-    margin-left: 100px;
+    margin-left: 6em; /* 96px equivalente */
     height: 100%;
-    min-width: 100%
-    
+    min-width: 100%;
 }
 
 /* Botões do Carrossel */
@@ -82,11 +88,25 @@ width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 0.625em 0.9375em; /* 10px 15px convertido */
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    font-size: 18px;
+    font-size: 1.125em; /* 18px convertido para em */
+}
+
+/* Media Query para ocultar botões em telas menores */
+@media (max-width: 768px) {
+    .btn {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .btn.btn.proximo {
+        display: none;
+    }
 }
 
 .btn:hover {
@@ -94,12 +114,12 @@ width: 100%;
 }
 
 .btn.anterior {
-    left: -550px;
+    left: -620px;
     top: 50px;
 }
 
 .btn.proximo {
-    left: -40px;
+    left: -22px;
     top: 50px;
 }
 
@@ -112,40 +132,6 @@ width: 100%;
     /* Espaço entre cada imagem */
     align-items: center;
     /* Centraliza as imagens horizontalmente */
-}
-
-.produto-item {
-    text-align: center;
-    /* Centraliza a imagem e o preço */
-}
-
-.acai,
-.acai2 {
-    width: 150px;
-    height: auto;
-    display: block;
-    /* Garante que cada imagem ocupe sua própria linha */
-    margin: 0 auto;
-    /* Centraliza as imagens */
-}
-
-.preco {
-    font-size: 16px;
-    color: #b22222;
-    text-align: center;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-p {
-    font-size: 40px;
-    color: white;
-    display: flex
-}
-
-p {
-    justify-content: center;
-    display: flex;
 }
 
 .btn {
@@ -265,16 +251,6 @@ iframe {
     border-radius: 10px;
 }
 
-.Palmeira {
-    margin-left: -40px;
-}
-
-.Palmeira2 {
-    margin-left: 550px;
-    transform: scaleX(-1);
-    /* Reflete a imagem horizontalmente */
-    margin-top: -96px;
-}
 
 hr {
     border: none;
@@ -305,10 +281,12 @@ h2 {
         transform: translateY(0);
     }
 }
-.Produtos{
+
+.Produtos {
     color: white;
 }
-.Combo{
+
+.Combo {
     color: white;
 }
 
@@ -316,82 +294,15 @@ h2 {
 
 .Insta {
     max-width: 120px;
-   margin-left: -0px;
-}
-
-
-.mapa {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.mapa h2 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.mapa-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-iframe {
-    border: none;
-    border-radius: 10px;
-}
-
-.Palmeira {
-    margin-left: -40px;
-}
-
-.Palmeira2 {
-    margin-left: 550px;
-    transform: scaleX(-1);
-    /* Reflete a imagem horizontalmente */
-    margin-top: -96px;
-}
-
-hr {
-    border: none;
-    /* Remove o estilo padrão da linha */
-    border-top: 2px solid #fff;
-    /* Define uma linha branca e de 2px de espessura */
-    margin: 10px auto;
-    /* Ajusta o espaçamento entre as linhas e as margens */
-    width: 20%;
-    /* Define a largura da linha */
-}
-
-h2 {
-    animation: fadeInUp 1s forwards;
-    /* Aplica a animação */
-    transition: border-color 0.3s ease;
-    /* Transição suave para a mudança de cor */
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-
-
-
-
+    margin-left: -0px;
 }
 
 
 
-.Combo{
+.Combo {
     color: white;
 }
+
 p {
     font-size: 40px;
     color: white;
@@ -402,6 +313,7 @@ p {
     justify-content: center;
     display: flex;
 }
+
 /* Botão do WhatsApp */
 .btn-whatsapp {
     background-color: #25d366;
@@ -446,15 +358,17 @@ p {
     /* Aumenta o botão ao passar o mouse */
 }
 
-.Produtos{
+.Produtos {
     color: white;
 }
-.AcaiBra{
+
+.AcaiBra {
     color: white;
 }
+
 /* Estilos da Seção de Combo */
 .combo {
-    
+
     padding: 50px 20px;
     text-align: center;
     background: linear-gradient(135deg, #4e1656, #8b3e72, #e5b85b);
@@ -599,54 +513,8 @@ p {
 
 
 
-/* Botão do WhatsApp */
-.btn-whatsapp {
-    background-color: #25d366;
-    /* Cor verde do WhatsApp */
-    color: white;
-    padding: 15px 25px;
-    /* Tamanho adequado do botão */
-    border: none;
-    border-radius: 50px;
-    /* Botão arredondado */
-    font-size: 16px;
-    cursor: pointer;
-    position: fixed;
-    /* Fixa o botão na tela */
-    bottom: 20px;
-    /* Distância do botão para a parte inferior */
-    right: 20px;
-    /* Distância do botão para a parte direita */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    /* Adiciona sombra ao botão */
-    z-index: 1000;
-    /* Garantir que o botão esteja no topo de outros elementos */
-    transition: background-color 0.3s, transform 0.3s;
-}
 
-/* Ícone do WhatsApp */
-.btn-whatsapp i {
-    margin-right: 10px;
-    /* Espaço entre o ícone e o texto */
-    font-size: 20px;
-    /* Tamanho do ícone */
-}
 
-/* Efeito hover */
-.btn-whatsapp:hover {
-    background-color: #128c7e;
-    /* Cor mais escura ao passar o mouse */
-    transform: scale(1.1);
-    /* Aumenta o botão ao passar o mouse */
-}
-
-.Insta {
-    max-width: 120px;
-   
-}
 
 /* Estilização do Rodapé */
 .rodape {
@@ -671,151 +539,13 @@ p {
     margin: 10px 0;
 }
 
-.social-media {
-    margin-top: 10px;
-}
-
-.social-icon {
-    color: white;
-    font-size: 20px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #00a8ea;
-    /* Cor de destaque para ícones ao passar o mouse */
-}
-
-.social-icon i {
-    transition: color 0.3s ease;
-}
-
-/* Estilização do Rodapé */
-.rodape {
-    background-color: #353535;
-    /* Cor de fundo do rodapé */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    font-size: 14px;
-}
-
-.rodape-conteudo {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.rodape p {
-    margin: 10px 0;
-}
-
-.social-media {
-    margin-top: 10px;
-}
-
-.social-icon {
-    color: white;
-    font-size: 20px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #00a8ea;
-    /* Cor de destaque para ícones ao passar o mouse */
-}
-
-.social-icon i {
-    transition: color 0.3s ease;
-}
-
-/* Estilização do Mapa */
-.mapa {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.mapa h2 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.mapa-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-iframe {
-    border: none;
-    border-radius: 10px;
-}
-
-.Palmeira {
-    margin-left: -40px;
-}
-
-.Palmeira2 {
-    margin-left: 550px;
-    transform: scaleX(-1);
-    /* Reflete a imagem horizontalmente */
-    margin-top: -96px;
-}
-
-hr {
-    border: none;
-    /* Remove o estilo padrão da linha */
-    border-top: 2px solid #fff;
-    /* Define uma linha branca e de 2px de espessura */
-    margin: 10px auto;
-    /* Ajusta o espaçamento entre as linhas e as margens */
-    width: 20%;
-    /* Define a largura da linha */
-}
-
-h2 {
-    animation: fadeInUp 1s forwards;
-    /* Aplica a animação */
-    transition: border-color 0.3s ease;
-    /* Transição suave para a mudança de cor */
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
-header h1 {
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
-}
-p {
-    font-size: 40px;
-    color: white;
-    display: flex
-}
-
-p {
-    justify-content: center;
-    display: flex;
-}
-.AcaiBra{
+.AcaiBra {
     color: white;
 }
+
 /* Estilos da Seção de Produtos */
 .produtos-acai {
 
@@ -890,9 +620,10 @@ p {
     background-color: #8E44AD;
 }
 
-.rodape{
+.rodape {
     background-color: black;
 }
+
 /* Estilos para a seção de Promoção */
 .promocao {
     background: linear-gradient(135deg, #5A2D81, #8E44AD);
@@ -944,7 +675,7 @@ p {
 .promocao-info .descricao {
     font-size: 16px;
     margin-bottom: 15px;
-    
+
 }
 
 .btn-comprar {
@@ -963,6 +694,7 @@ p {
     background-color: #ff7e5f;
     color: white;
 }
+
 .promocao {
     text-align: center;
     padding: 20px;
@@ -1006,13 +738,13 @@ p {
 .promocao-info h3 {
     font-size: 20px;
     margin: 10px 0;
-    color: #cecb14;             
+    color: #cecb14;
 }
 
 .promocao-info .descricao {
     font-size: 16px;
     margin: 10px 0;
-      color: #ffffff;
+    color: #ffffff;
 }
 
 .preco {
@@ -1050,19 +782,22 @@ p {
 .btn-comprar:hover {
     background-color: #c9302c;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
-.banner{
+
+.banner {
     width: 100%;
     height: 100vh;
-    background-image:url(açai.png);
+    background-image: url(açai.png);
     background-size: cover;
     background-position: center;
 }
-.navbar{
+
+.navbar {
     width: 85%;
     margin: auto;
     padding: 35px 0;
@@ -1070,66 +805,76 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+
+.logo {
     width: 120px;
     cursor: pointer;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
-    height:3px;
-    width:0%;
-    background:#009688;
-    position:absolute;
-    left:0;
-    bottom:-10px;
-    transition:0.5s;
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
 }
-.navbar ul li:hover::after{
-    width:100%;
+
+.navbar ul li:hover::after {
+    width: 100%;
 }
-.content{
-    position:absolute;
-    width:100%;
-    top:50%;
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
     transform: translateY(-50%);
-    text-align:center;
-    color:#fff;
+    text-align: center;
+    color: #fff;
 }
-.content h1{
-    font-size:70px;
-    margin-top:80px;
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
 }
-.content p{
-    margin:20px auto;
-    font-weight:100;
-    line-height:25px;
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
 }
-button{
-    width:200px;
+
+button {
+    width: 200px;
     padding: 15px 0;
-    text-align:center;
-    margin:20 px 10 px;
-    border-radius:25px;
-    font-weight:bold;
+    text-align: center;
+    margin: 20 px 10 px;
+    border-radius: 25px;
+    font-weight: bold;
     border: 2px solid #009688;
     background: transparent;
-    color:#fff;
+    color: #fff;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
-span{
+
+span {
     background: #009688;
     height: 100%;
     width: 0%;
@@ -1140,24 +885,30 @@ span{
     z-index: -1;
     transition: 0.5s;
 }
-button:hover span{
+
+button:hover span {
     width: 100%;
 }
-button:hover{
+
+button:hover {
     border: none;
 }
+
 .Contato {
     background: linear-gradient(135deg, #5A2D81, #8E44AD);
     padding: 50px 0;
     text-align: center;
     color: white;
 }
-.mapa{
+
+.mapa {
     background: linear-gradient(135deg, #5A2D81, #8E44AD);
 }
-.RodapeFundo{
+
+.RodapeFundo {
     background: linear-gradient(135deg, #5A2D81, #8E44AD);
 }
+
 .preco {
     display: flex;
     flex-direction: column;
@@ -1176,72 +927,4 @@ button:hover{
     font-size: 1.5em;
     color: #e91e63;
     font-weight: bold;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-   
-    color: white;
-}
-
-.UL {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-}
-
-.UL li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.UL li a:hover {
-    color: #ff9800;
-}
-
-/* Esconde o menu em telas pequenas */
-.UL {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.menu-toggle {
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-/* Torna o menu visível quando ativo */
-nav.active .UL {
-    display: flex;
-}
-
-/* Exibe o menu normal em telas maiores */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    .UL {
-        display: flex;
-        position: static;
-        flex-direction: row;
-        background: none;
-        padding: 0;
-        border-radius: 0;
-    }
 }

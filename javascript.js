@@ -84,9 +84,3 @@ function touchMove(event) {
     event.preventDefault(); // Impede a rolagem da página
     fimX = event.touches[0].clientX;
 }
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-});

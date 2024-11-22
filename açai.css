@@ -487,3 +487,113 @@ h2 {
         transform: translateY(0);
     }
 }
+@media (max-width: 480px) {
+    .navbar ul li {
+        display: block; /* Empilha os itens do menu */
+        margin: 10px 0;
+    }
+
+    .btn-whatsapp {
+        padding: 10px 15px; /* Reduz o tamanho do botão */
+        bottom: 10px; /* Aproxima o botão do rodapé */
+        right: 10px;
+    }
+
+    .btn-whatsapp i {
+        font-size: 16px; /* Diminui o tamanho do ícone */
+    }
+
+    .produtos-acai h2 {
+        font-size: 20px; /* Reduz o tamanho do texto */
+    }
+
+    .produtos-lista {
+        gap: 5px; /* Reduz ainda mais o espaçamento */
+    }
+
+    .produto-item img {
+        height: 150px; /* Ajusta a altura das imagens */
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    button {
+        width: 120px;
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    hr {
+        width: 50%; /* Ajusta o tamanho do separador */
+    }
+}
+@media (max-width: 768px) {
+    .banner {
+        height: 90vh; /* Reduz a altura do banner */
+        background-position: top; /* Ajusta a posição do fundo */
+    }
+
+    .produto-item img {
+        width: 100%; /* Garante que a imagem ocupe toda a largura disponível */
+    }
+
+    iframe {
+        width: 90%; /* Ajusta o mapa para dispositivos menores */
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    .rodape p {
+        font-size: 12px; /* Reduz o texto no rodapé */
+    }
+}
+
+@media (max-width: 480px) {
+    .rodape p {
+        line-height: 1.4; /* Ajusta o espaçamento no texto */
+    }
+}
+.content {
+    text-align: center;
+    padding: 2em;
+  
+    color: white;
+}
+
+.content h1 {
+    font-size: 4em;
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona profundidade ao texto */
+}
+
+.content p {
+    font-size: 2em;
+    margin: 0.5em 0;
+    font-weight: 300;
+}
+
+/* Para telas médias (tablets) */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 3em;
+    }
+    .content p {
+        font-size: 1.5em;
+    }
+}
+
+/* Para telas pequenas (smartphones) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2.5em;
+    }
+    .content p {
+        font-size: 1.2em;
+    }
+}

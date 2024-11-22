@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #5A2D81, #8E44AD, #D4A5D6);
+    background: linear-gradient(135deg, #ffffff, rgb(255, 255, 255), #ffffff);
     line-height: 1.6;
 }
 
@@ -59,7 +59,7 @@ header h1 {
 
 p {
     font-size: 40px;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex
 }
 
@@ -166,12 +166,12 @@ p {
 
     padding: 50px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #5A2D81, #8E44AD);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
 }
 
 .produtos-acai h2 {
     font-size: 32px;
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: bold;
@@ -185,7 +185,7 @@ p {
 }
 
 .produto-item {
-    background-color: #0b4e16;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     width: 280px;
@@ -208,7 +208,7 @@ p {
 
 .produto-info .descricao {
     font-size: 16px;
-    color: #ffffff;
+    color: #f58d06;
     margin-top: 10px;
 }
 
@@ -237,7 +237,7 @@ p {
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: url(açai.png);
+    background-image: url(pexels-goumbik-1352271.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -340,18 +340,18 @@ button:hover {
 }
 
 .Contato {
-    background: linear-gradient(135deg, #5A2D81, #8E44AD);
+    background: linear-gradient(135deg, #ffffff, #fafafa);
     padding: 50px 0;
     text-align: center;
     color: white;
 }
 
 .mapa {
-    background: linear-gradient(135deg, #5A2D81, #8E44AD);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
 }
 
 .RodapeFundo {
-    background: linear-gradient(135deg, #5A2D81, #8E44AD);
+    background: linear-gradient(135deg, #fafafa, #ffffff);
 }
 
 /* Estilização do Rodapé */
@@ -429,7 +429,7 @@ button:hover {
     margin-left: -0px;
 }
 .fundo {
-    background: linear-gradient(135deg, #5A2D81, #8E44AD);
+    background: linear-gradient(135deg, #ffffff, #ffffff);
     padding: 20px;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -443,7 +443,7 @@ button:hover {
 
 .mapa h2 {
     font-size: 24px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 15px;
 }
 
@@ -474,6 +474,7 @@ h2 {
     /* Aplica a animação */
     transition: border-color 0.3s ease;
     /* Transição suave para a mudança de cor */
+   
 }
 
 @keyframes fadeInUp {
@@ -486,4 +487,10 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.Paragrafo1{
+  color: white;
+}
+.Contatop{
+  color: black;
 }
